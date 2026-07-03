@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 6 — Vue Router + Navigation Guard</text>
+
+  <defs><marker id="a6" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#35495e"/></marker>
+  <marker id="a6r" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#ef4444"/></marker></defs>
+
+  <rect x="80" y="55" width="600" height="42" rx="8" fill="#35495e"/>
+  <text x="110" y="82" font-size="13" fill="#94f7cf">Home</text>
+  <text x="175" y="82" font-size="13" fill="#e2e8f0">About</text>
+  <text x="240" y="82" font-size="13" fill="#e2e8f0">Users</text>
+  <text x="555" y="82" font-size="11" fill="#94a3b8">&lt;router-link&gt;</text>
+
+  <rect x="55" y="135" width="130" height="70" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="120" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#35495e">Home</text>
+  <text x="120" y="186" text-anchor="middle" font-size="11" fill="#64748b" font-family="Consolas, monospace">/</text>
+
+  <rect x="210" y="135" width="130" height="70" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="275" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#35495e">About</text>
+  <text x="275" y="186" text-anchor="middle" font-size="11" fill="#64748b" font-family="Consolas, monospace">/about</text>
+
+  <rect x="420" y="135" width="140" height="70" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="490" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#35495e">Users (list)</text>
+  <text x="490" y="180" text-anchor="middle" font-size="11" fill="#64748b" font-family="Consolas, monospace">/users</text>
+  <text x="490" y="197" text-anchor="middle" font-size="10" fill="#dc2626">🔒 butuh login</text>
+
+  <rect x="595" y="135" width="120" height="70" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="655" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#64748b">404</text>
+  <text x="655" y="186" text-anchor="middle" font-size="10" fill="#94a3b8" font-family="Consolas, monospace">/:pathMatch(.*)</text>
+
+  <!-- guard diamond -->
+  <polygon points="490,240 570,285 490,330 410,285" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+  <text x="490" y="280" text-anchor="middle" font-size="11" font-weight="bold" fill="#b45309">beforeEach:</text>
+  <text x="490" y="297" text-anchor="middle" font-size="11" fill="#b45309">isLoggedIn?</text>
+
+  <rect x="600" y="260" width="130" height="50" rx="10" fill="#ffffff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="665" y="282" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">User Detail</text>
+  <text x="665" y="300" text-anchor="middle" font-size="10" fill="#7c3aed" font-family="Consolas, monospace">/users/:id</text>
+
+  <rect x="150" y="350" width="150" height="50" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="225" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">Login (dummy)</text>
+  <text x="225" y="390" text-anchor="middle" font-size="10" fill="#64748b" font-family="Consolas, monospace">/login</text>
+
+  <path d="M 490 205 L 490 235" stroke="#f59e0b" stroke-width="2" fill="none" marker-end="url(#a6)"/>
+  <path d="M 570 285 L 595 285" stroke="#42b883" stroke-width="2" fill="none" marker-end="url(#a6)"/>
+  <text x="583" y="275" text-anchor="middle" font-size="10" fill="#047857">ya</text>
+  <path d="M 410 285 L 240 285 L 230 345" stroke="#ef4444" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#a6r)"/>
+  <text x="320" y="277" font-size="10" fill="#dc2626">tidak → redirect /login</text>
+  <text x="665" y="335" text-anchor="middle" font-size="10" fill="#64748b">route.params.id</text>
+
+  <text x="380" y="420" text-anchor="middle" font-size="12" fill="#64748b">Semua halaman dirender di &lt;router-view&gt; · pindah halaman via router.push()</text>
+</svg>

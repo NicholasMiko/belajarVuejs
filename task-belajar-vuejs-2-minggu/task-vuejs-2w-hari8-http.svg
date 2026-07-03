@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 8 — Fetch Wrapper Terpusat &amp; 3 State UI</text>
+
+  <defs><marker id="a8" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#35495e"/></marker></defs>
+
+  <!-- components -->
+  <rect x="45" y="70" width="150" height="50" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="120" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">UsersPage.vue</text>
+  <rect x="45" y="140" width="150" height="50" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="120" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">UserDetail.vue</text>
+
+  <!-- fetch wrapper -->
+  <rect x="280" y="85" width="200" height="90" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2.5"/>
+  <text x="380" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d4ed8">src/api/index.js</text>
+  <text x="380" y="132" text-anchor="middle" font-size="10" fill="#35495e" font-family="Consolas, monospace">apiFetch(path, options)</text>
+  <text x="380" y="150" text-anchor="middle" font-size="10" fill="#64748b">baseURL + cek response.ok + parse JSON</text>
+  <text x="380" y="166" text-anchor="middle" font-size="10" fill="#64748b">satu pintu untuk semua request</text>
+
+  <!-- API -->
+  <ellipse cx="620" cy="95" rx="20" ry="8" fill="#cbd5e1"/>
+  <rect x="600" y="95" width="40" height="45" fill="#cbd5e1"/>
+  <ellipse cx="620" cy="140" rx="20" ry="8" fill="#94a3b8"/>
+  <text x="620" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#35495e">jsonplaceholder</text>
+
+  <path d="M 195 95 L 275 115" stroke="#35495e" stroke-width="2" fill="none" marker-end="url(#a8)"/>
+  <path d="M 195 165 L 275 145" stroke="#35495e" stroke-width="2" fill="none" marker-end="url(#a8)"/>
+  <path d="M 480 118 L 595 110" stroke="#3b82f6" stroke-width="2" fill="none" marker-end="url(#a8)"/>
+  <text x="537" y="103" text-anchor="middle" font-size="10" fill="#3b82f6">GET /users</text>
+
+  <!-- 3 states -->
+  <text x="380" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#35495e">Setiap request wajib menangani 3 state:</text>
+
+  <rect x="70" y="255" width="190" height="130" rx="10" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="165" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#3b82f6">⏳ Loading</text>
+  <circle cx="165" cy="318" r="18" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="20 60"/>
+  <text x="165" y="365" text-anchor="middle" font-size="11" fill="#64748b">skeleton / spinner</text>
+
+  <rect x="285" y="255" width="190" height="130" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="380" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#42b883">✅ Sukses / Kosong</text>
+  <rect x="305" y="295" width="150" height="13" rx="3" fill="#e2e8f0"/>
+  <rect x="305" y="315" width="150" height="13" rx="3" fill="#e2e8f0"/>
+  <rect x="305" y="335" width="150" height="13" rx="3" fill="#e2e8f0"/>
+  <text x="380" y="370" text-anchor="middle" font-size="10" fill="#64748b">data kosong → tampilkan empty state</text>
+
+  <rect x="500" y="255" width="190" height="130" rx="10" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="595" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">❌ Error (cek response.ok!)</text>
+  <rect x="520" y="295" width="150" height="36" rx="6" fill="#fee2e2"/>
+  <text x="595" y="317" text-anchor="middle" font-size="10" fill="#dc2626">"Gagal memuat data"</text>
+  <rect x="547" y="342" width="96" height="26" rx="13" fill="#ef4444"/>
+  <text x="595" y="359" text-anchor="middle" font-size="11" fill="#ffffff">🔄 Coba lagi</text>
+
+  <text x="380" y="415" text-anchor="middle" font-size="11" fill="#64748b">Awas: fetch TIDAK throw untuk status 4xx/5xx — wajib cek response.ok · AbortController saat unmount</text>
+</svg>

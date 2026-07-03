@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="400" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 2 — Kalkulator Diskon (ref, computed, watch)</text>
+
+  <!-- app -->
+  <rect x="50" y="60" width="300" height="300" rx="10" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="200" y="92" text-anchor="middle" font-size="14" font-weight="bold" fill="#35495e">💰 Kalkulator Diskon</text>
+  <text x="75" y="120" font-size="11" fill="#64748b">Harga</text>
+  <rect x="75" y="127" width="250" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="87" y="147" font-size="12" fill="#35495e">100000</text>
+  <text x="75" y="180" font-size="11" fill="#64748b">Diskon (%)</text>
+  <rect x="75" y="187" width="250" height="30" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="87" y="207" font-size="12" fill="#35495e">20</text>
+  <rect x="75" y="240" width="250" height="46" rx="8" fill="#ecfdf5" stroke="#42b883" stroke-width="2"/>
+  <text x="87" y="259" font-size="11" fill="#047857">Harga akhir (computed):</text>
+  <text x="87" y="278" font-size="15" font-weight="bold" fill="#047857">Rp 80.000</text>
+  <rect x="75" y="300" width="250" height="46" rx="8" fill="#fffbeb" stroke="#fbbf24"/>
+  <text x="87" y="318" font-size="10" fill="#b45309">riwayat (watch): 150000 → 120000</text>
+  <text x="87" y="334" font-size="10" fill="#b45309">→ 100000</text>
+
+  <!-- flow -->
+  <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#35495e"/></marker></defs>
+  <rect x="430" y="80" width="140" height="46" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="500" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">ref: harga</text>
+  <text x="500" y="117" text-anchor="middle" font-size="10" fill="#64748b">v-model.number</text>
+  <rect x="590" y="80" width="140" height="46" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="660" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">ref: diskon</text>
+  <text x="660" y="117" text-anchor="middle" font-size="10" fill="#64748b">v-model.number</text>
+
+  <rect x="510" y="185" width="140" height="52" rx="8" fill="#ecfdf5" stroke="#42b883" stroke-width="2"/>
+  <text x="580" y="206" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">computed</text>
+  <text x="580" y="224" text-anchor="middle" font-size="10" fill="#047857" font-family="Consolas, monospace">harga*(1-diskon/100)</text>
+
+  <rect x="510" y="290" width="140" height="52" rx="8" fill="#fffbeb" stroke="#fbbf24" stroke-width="2"/>
+  <text x="580" y="311" text-anchor="middle" font-size="12" font-weight="bold" fill="#b45309">watch(harga)</text>
+  <text x="580" y="329" text-anchor="middle" font-size="10" fill="#b45309">catat riwayat perubahan</text>
+
+  <path d="M 500 126 L 555 180" stroke="#35495e" stroke-width="1.5" fill="none" marker-end="url(#a2)"/>
+  <path d="M 660 126 L 605 180" stroke="#35495e" stroke-width="1.5" fill="none" marker-end="url(#a2)"/>
+  <path d="M 470 126 L 470 310 L 505 310" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="5 3" marker-end="url(#a2)"/>
+  <text x="682" y="265" font-size="10" fill="#64748b">otomatis dihitung ulang,</text>
+  <text x="682" y="279" font-size="10" fill="#64748b">tidak perlu dipanggil</text>
+  <path d="M 580 237 L 580 260" stroke="#42b883" stroke-width="1.5" fill="none" marker-end="url(#a2)"/>
+  <text x="580" y="275" text-anchor="middle" font-size="10" fill="#047857">tampil di UI</text>
+</svg>

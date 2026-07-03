@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 11 — Form Registrasi dengan Validasi per Field</text>
+
+  <!-- form -->
+  <rect x="180" y="55" width="400" height="345" rx="12" fill="#ffffff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="380" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#35495e">📝 Registrasi User</text>
+
+  <text x="210" y="115" font-size="11" fill="#64748b">Nama *</text>
+  <rect x="210" y="122" width="340" height="32" rx="6" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="222" y="143" font-size="12" fill="#35495e">Budi Santoso ✓</text>
+
+  <text x="210" y="175" font-size="11" fill="#64748b">Email *</text>
+  <rect x="210" y="182" width="340" height="32" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="222" y="203" font-size="12" fill="#35495e">budi@gmail</text>
+  <text x="210" y="230" font-size="10" fill="#dc2626">⚠ Format email tidak valid</text>
+
+  <text x="210" y="252" font-size="11" fill="#64748b">Password *</text>
+  <rect x="210" y="259" width="340" height="32" rx="6" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="222" y="280" font-size="12" fill="#35495e">••••••</text>
+  <text x="210" y="307" font-size="10" fill="#dc2626">⚠ Minimal 8 karakter (baru 6)</text>
+
+  <text x="210" y="329" font-size="11" fill="#64748b">Konfirmasi Password *</text>
+  <rect x="210" y="336" width="340" height="32" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="222" y="357" font-size="11" fill="#94a3b8">belum disentuh → belum divalidasi</text>
+
+  <rect x="210" y="380" width="150" height="6" rx="3" fill="#e2e8f0"/>
+
+  <!-- submit disabled -->
+  <rect x="420" y="374" width="130" height="20" rx="10" fill="#cbd5e1"/>
+  <text x="485" y="388" text-anchor="middle" font-size="10" fill="#64748b">Daftar (disabled)</text>
+
+  <!-- annotations -->
+  <defs><marker id="a11" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f59e0b"/></marker></defs>
+  <text x="600" y="140" font-size="11" fill="#047857">✓ valid → border hijau</text>
+  <text x="600" y="200" font-size="11" fill="#dc2626">✗ invalid + touched</text>
+  <text x="600" y="216" font-size="11" fill="#dc2626">→ pesan error muncul</text>
+  <text x="600" y="355" font-size="11" fill="#64748b">belum touched</text>
+  <text x="600" y="371" font-size="11" fill="#64748b">→ jangan tampilkan error</text>
+
+  <text x="40" y="140" font-size="11" fill="#35495e" font-weight="bold">Aturan:</text>
+  <text x="40" y="162" font-size="10" fill="#64748b">• nama wajib</text>
+  <text x="40" y="180" font-size="10" fill="#64748b">• email format valid</text>
+  <text x="40" y="198" font-size="10" fill="#64748b">• password ≥ 8</text>
+  <text x="40" y="216" font-size="10" fill="#64748b">• konfirmasi sama</text>
+  <text x="40" y="250" font-size="10" fill="#b45309">submit disabled</text>
+  <text x="40" y="266" font-size="10" fill="#b45309">selama form invalid</text>
+  <text x="40" y="300" font-size="10" fill="#64748b">valid → POST API</text>
+  <text x="40" y="316" font-size="10" fill="#64748b">→ notifikasi</text>
+  <text x="40" y="332" font-size="10" fill="#64748b">sukses / gagal</text>
+
+  <text x="380" y="420" text-anchor="middle" font-size="11" fill="#64748b">Validasi manual dengan computed, atau pakai VeeValidate / Zod — pilih salah satu</text>
+</svg>

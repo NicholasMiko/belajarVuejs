@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="430" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 7 — Checkpoint 1: Katalog Buku (mini project)</text>
+
+  <defs><marker id="a7" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#35495e"/></marker></defs>
+
+  <!-- list page -->
+  <rect x="45" y="60" width="310" height="300" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="65" y="88" font-size="14" font-weight="bold" fill="#35495e">📚 Katalog Buku  (/books)</text>
+  <rect x="65" y="100" width="170" height="28" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="75" y="118" font-size="11" fill="#94a3b8">🔍 cari judul...</text>
+  <rect x="245" y="100" width="95" height="28" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="255" y="118" font-size="11" fill="#64748b">Kategori ▾</text>
+
+  <rect x="65" y="142" width="130" height="90" rx="8" fill="#f1f5f9"/>
+  <rect x="78" y="152" width="36" height="48" rx="4" fill="#42b883"/>
+  <text x="122" y="168" font-size="11" font-weight="bold" fill="#35495e">Laskar</text>
+  <text x="122" y="182" font-size="11" font-weight="bold" fill="#35495e">Pelangi</text>
+  <text x="78" y="222" font-size="10" fill="#64748b">Novel</text>
+  <rect x="210" y="142" width="130" height="90" rx="8" fill="#f1f5f9"/>
+  <rect x="223" y="152" width="36" height="48" rx="4" fill="#8b5cf6"/>
+  <text x="267" y="168" font-size="11" font-weight="bold" fill="#35495e">Clean</text>
+  <text x="267" y="182" font-size="11" font-weight="bold" fill="#35495e">Code</text>
+  <text x="223" y="222" font-size="10" fill="#64748b">Teknologi</text>
+  <rect x="65" y="242" width="130" height="90" rx="8" fill="#f1f5f9"/>
+  <rect x="78" y="252" width="36" height="48" rx="4" fill="#f59e0b"/>
+  <text x="122" y="268" font-size="11" font-weight="bold" fill="#35495e">Atomic</text>
+  <text x="122" y="282" font-size="11" font-weight="bold" fill="#35495e">Habits</text>
+  <text x="78" y="322" font-size="10" fill="#64748b">Self-help</text>
+  <rect x="210" y="242" width="130" height="90" rx="8" fill="#ecfdf5" stroke="#42b883" stroke-dasharray="5 3"/>
+  <text x="275" y="285" text-anchor="middle" font-size="24" fill="#42b883">＋</text>
+  <text x="275" y="312" text-anchor="middle" font-size="10" fill="#047857">Tambah Buku</text>
+
+  <!-- detail -->
+  <rect x="420" y="60" width="300" height="130" rx="10" fill="#ffffff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="440" y="88" font-size="13" font-weight="bold" fill="#35495e">Detail  (/books/:id)</text>
+  <rect x="440" y="100" width="50" height="68" rx="4" fill="#42b883"/>
+  <text x="505" y="115" font-size="12" font-weight="bold" fill="#35495e">Laskar Pelangi</text>
+  <text x="505" y="133" font-size="10" fill="#64748b">Andrea Hirata · Novel · 2005</text>
+  <text x="505" y="152" font-size="10" fill="#64748b">Sinopsis singkat buku...</text>
+
+  <!-- form modal -->
+  <rect x="420" y="215" width="300" height="145" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="2"/>
+  <text x="440" y="243" font-size="13" font-weight="bold" fill="#35495e">Form Tambah (BaseModal)</text>
+  <rect x="440" y="255" width="260" height="24" rx="5" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="450" y="271" font-size="10" fill="#94a3b8">Judul</text>
+  <rect x="440" y="286" width="260" height="24" rx="5" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="450" y="302" font-size="10" fill="#94a3b8">Kategori</text>
+  <rect x="440" y="320" width="90" height="26" rx="6" fill="#42b883"/>
+  <text x="485" y="337" text-anchor="middle" font-size="11" fill="#ffffff">Simpan</text>
+  <text x="600" y="337" font-size="9" fill="#94a3b8">simpan di memori saja</text>
+
+  <path d="M 355 160 L 415 125" stroke="#35495e" stroke-width="2" fill="none" marker-end="url(#a7)"/>
+  <text x="385" y="132" font-size="10" fill="#64748b">klik →</text>
+
+  <text x="380" y="395 " text-anchor="middle" font-size="12" font-weight="bold" fill="#b45309">Wajib dipakai: component terpisah · props/emit · slot · router · computed (search &amp; filter)</text>
+  <text x="380" y="417" text-anchor="middle" font-size="11" fill="#64748b">Selesai dalam 1 hari → demo ke mentor</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 10 — Composables: ekstrak logic, pakai berulang</text>
+
+  <defs><marker id="a10" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#42b883"/></marker></defs>
+
+  <!-- before -->
+  <rect x="45" y="65" width="200" height="130" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+  <text x="145" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc2626">❌ Sebelum</text>
+  <text x="60" y="112" font-size="10" fill="#64748b" font-family="Consolas, monospace">// UsersPage.vue</text>
+  <text x="60" y="128" font-size="10" fill="#35495e" font-family="Consolas, monospace">const loading = ref(...)</text>
+  <text x="60" y="144" font-size="10" fill="#35495e" font-family="Consolas, monospace">const error = ref(...)</text>
+  <text x="60" y="160" font-size="10" fill="#35495e" font-family="Consolas, monospace">try { ... } catch ...</text>
+  <text x="60" y="180" font-size="10" fill="#dc2626">copy-paste di tiap component 😫</text>
+
+  <!-- composable -->
+  <rect x="290" y="65" width="200" height="130" rx="10" fill="#ecfdf5" stroke="#42b883" stroke-width="2.5"/>
+  <text x="390" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">✅ useFetch.js</text>
+  <text x="305" y="112" font-size="10" fill="#35495e" font-family="Consolas, monospace">export function useFetch(url)</text>
+  <text x="305" y="130" font-size="10" fill="#35495e" font-family="Consolas, monospace">{</text>
+  <text x="317" y="146" font-size="10" fill="#35495e" font-family="Consolas, monospace">return { data, loading,</text>
+  <text x="345" y="162" font-size="10" fill="#35495e" font-family="Consolas, monospace">error, refetch }</text>
+  <text x="305" y="178" font-size="10" fill="#35495e" font-family="Consolas, monospace">}</text>
+
+  <rect x="535" y="65" width="200" height="130" rx="10" fill="#ecfdf5" stroke="#42b883" stroke-width="2.5"/>
+  <text x="635" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#047857">✅ useLocalStorage.js</text>
+  <text x="550" y="112" font-size="10" fill="#35495e" font-family="Consolas, monospace">useLocalStorage(key, def)</text>
+  <text x="550" y="132" font-size="10" fill="#64748b">ref yang otomatis tersimpan</text>
+  <text x="550" y="148" font-size="10" fill="#64748b">ke localStorage tiap berubah</text>
+  <text x="550" y="172" font-size="10" fill="#64748b">dipakai: preferensi filter user</text>
+
+  <!-- consumers -->
+  <rect x="120" y="290" width="160" height="54" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="200" y="313" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">UsersPage.vue</text>
+  <text x="200" y="331" text-anchor="middle" font-size="9" fill="#64748b" font-family="Consolas, monospace">useFetch('/users')</text>
+
+  <rect x="300" y="290" width="160" height="54" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="380" y="313" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">UserDetail.vue</text>
+  <text x="380" y="331" text-anchor="middle" font-size="9" fill="#64748b" font-family="Consolas, monospace">useFetch(`/users/${id}`)</text>
+
+  <rect x="480" y="290" width="160" height="54" rx="10" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="560" y="313" text-anchor="middle" font-size="12" font-weight="bold" fill="#35495e">FilterBar.vue</text>
+  <text x="560" y="331" text-anchor="middle" font-size="9" fill="#64748b" font-family="Consolas, monospace">useLocalStorage('filter')</text>
+
+  <path d="M 370 195 L 230 285" stroke="#42b883" stroke-width="2" fill="none" marker-end="url(#a10)"/>
+  <path d="M 390 195 L 385 285" stroke="#42b883" stroke-width="2" fill="none" marker-end="url(#a10)"/>
+  <path d="M 635 195 L 570 285" stroke="#42b883" stroke-width="2" fill="none" marker-end="url(#a10)"/>
+
+  <text x="380" y="240" text-anchor="middle" font-size="11" fill="#047857" font-weight="bold">satu logic → dipakai banyak component</text>
+  <text x="380" y="395" text-anchor="middle" font-size="11" fill="#64748b">Konvensi: nama diawali "use", file di src/composables/ · lihat VueUse untuk inspirasi</text>
+</svg>

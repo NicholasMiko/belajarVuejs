@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="760" height="420" fill="#f8fafc"/>
+  <text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#35495e">Hari 12 — Unit Test (Vitest + Vue Test Utils)</text>
+
+  <!-- test code -->
+  <rect x="45" y="60" width="360" height="200" rx="10" fill="#35495e"/>
+  <text x="65" y="88" font-size="11" fill="#94a3b8" font-family="Consolas, monospace">// TodoItem.spec.js</text>
+  <text x="65" y="112" font-size="11" fill="#94f7cf" font-family="Consolas, monospace">test('emit toggle saat checkbox diklik',</text>
+  <text x="85" y="130" font-size="11" fill="#94f7cf" font-family="Consolas, monospace">async () =&gt; {</text>
+  <text x="85" y="152" font-size="11" fill="#e2e8f0" font-family="Consolas, monospace">const w = mount(TodoItem,</text>
+  <text x="105" y="170" font-size="11" fill="#e2e8f0" font-family="Consolas, monospace">{ props: { todo } })</text>
+  <text x="85" y="192" font-size="11" fill="#e2e8f0" font-family="Consolas, monospace">await w.find('input').trigger('click')</text>
+  <text x="85" y="214" font-size="11" fill="#fbbf24" font-family="Consolas, monospace">expect(w.emitted('toggle')).toBeTruthy()</text>
+  <text x="65" y="236" font-size="11" fill="#94f7cf" font-family="Consolas, monospace">})</text>
+
+  <!-- terminal result -->
+  <rect x="450" y="60" width="270" height="200" rx="10" fill="#0f172a"/>
+  <text x="470" y="88" font-size="11" fill="#94a3b8" font-family="Consolas, monospace">$ npm run test</text>
+  <text x="470" y="115" font-size="11" fill="#4ade80" font-family="Consolas, monospace">✓ BaseButton variant (2)</text>
+  <text x="470" y="137" font-size="11" fill="#4ade80" font-family="Consolas, monospace">✓ TodoItem emit toggle</text>
+  <text x="470" y="159" font-size="11" fill="#4ade80" font-family="Consolas, monospace">✓ useFetch (mock fetch)</text>
+  <text x="470" y="181" font-size="11" fill="#4ade80" font-family="Consolas, monospace">✓ validasi email</text>
+  <text x="470" y="203" font-size="11" fill="#4ade80" font-family="Consolas, monospace">✓ validasi password</text>
+  <text x="470" y="233" font-size="11" fill="#4ade80" font-family="Consolas, monospace" font-weight="bold">Tests: 5 passed ✅</text>
+
+  <!-- what to test -->
+  <text x="380" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#35495e">Minimal 5 test:</text>
+  <rect x="55" y="315" width="160" height="50" rx="8" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="135" y="336" text-anchor="middle" font-size="11" font-weight="bold" fill="#35495e">BaseButton</text>
+  <text x="135" y="353" text-anchor="middle" font-size="10" fill="#64748b">render sesuai variant</text>
+  <rect x="230" y="315" width="160" height="50" rx="8" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="310" y="336" text-anchor="middle" font-size="11" font-weight="bold" fill="#35495e">TodoItem</text>
+  <text x="310" y="353" text-anchor="middle" font-size="10" fill="#64748b">emit saat interaksi</text>
+  <rect x="405" y="315" width="160" height="50" rx="8" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="485" y="336" text-anchor="middle" font-size="11" font-weight="bold" fill="#35495e">useFetch</text>
+  <text x="485" y="353" text-anchor="middle" font-size="10" fill="#64748b">mock global fetch</text>
+  <rect x="580" y="315" width="160" height="50" rx="8" fill="#ffffff" stroke="#42b883" stroke-width="2"/>
+  <text x="660" y="336" text-anchor="middle" font-size="11" font-weight="bold" fill="#35495e">Form validasi</text>
+  <text x="660" y="353" text-anchor="middle" font-size="10" fill="#64748b">2 kasus (valid/invalid)</text>
+
+  <text x="380" y="400" text-anchor="middle" font-size="11" fill="#64748b">Plus: ESLint + Prettier — codebase rapi, lint tanpa error</text>
+</svg>
