@@ -39,7 +39,7 @@ Deliverable: project berjalan di `localhost` + `ProfileCard` tampil.
 ![[task-vuejs-2w-hari2-reactivity.svg]]
 
 Materi:
-- `ref()` vs `reactive()` — kapan pakai yang mana
+- `ref()` vs `reactive()` — kapan pakaiya ng mana
 - `computed` vs method, dan kenapa computed di-cache
 - `watch` dan `watchEffect`
 
