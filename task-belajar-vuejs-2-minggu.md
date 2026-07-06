@@ -67,6 +67,28 @@ Tugas:
 
 Deliverable: Todo List berfungsi penuh tanpa reload halaman.
 
+#### Break story
+break story miko :
+1. bikin input + button tambah, pastikan button tambah berfungsi untuk menambahkan todo
+2. bikin list todo
+3. implement checkbox pada setiap list todo
+4. ketika checkbox di check, implement style sesuai gambar
+checkpoint
+
+5. implement tombol delete
+6. pastikan row nya hilang ketika tombol delete di hapus
+checkpoint
+
+7. implement soft delete pada tombol delete
+8. warnai row soft delete dengan background merah, tulisan jadi abu-abu, kasi strikethrough pada label, disable button checkboxnya
+checkpoint
+
+8. implement default value "belum ada todo"
+checkpoint
+
+9. implement filter dengan computed
+beres...
+
 ### Hari 4 — Component: Props & Emit
 
 ![[task-vuejs-2w-hari4-props-emit.svg]]

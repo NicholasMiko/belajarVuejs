@@ -16,6 +16,8 @@ const id = ref('001')
 const date = ref('2026')
 </script>
 
+
+//Ko Kevin sorry, ini ku coba menggunakan fitur CSS yang ini masih dibantu AI. Tetapi sudah Ku coba pelajari:
 <style scoped>
 .profile-card {
   display : flex;
