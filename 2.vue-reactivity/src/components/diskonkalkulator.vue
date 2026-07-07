@@ -28,8 +28,8 @@ const harga1 = ref<number>(0)
 const diskon1 = ref<number>(0)
 
 const hargaakhir = computed<number>(() => {
-  const totaldiskon = Math.min(diskon1.value, 100)
+const totaldiskon = Math.min(diskon1.value, 100)
 
-  return harga1.value - (harga1.value * totaldiskon / 100)
+return harga1.value - (harga1.value * totaldiskon / 100)
 })
 </script>

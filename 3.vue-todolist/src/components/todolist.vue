@@ -17,12 +17,16 @@
     <li
       v-for="(todo, index) in todos"
       :key="index"
-      :class="{ selesai: todo.done }"
+      :class="{
+      selesai: todo.done, 
+      hapus: todo.deleted
+    }"
       >
       <input
-        type="checkbox"
-        v-model="todo.done"
-      >
+       type="checkbox"
+       v-model="todo.done"
+       :disabled="todo.deleted"
+    >
       <span>
         {{ todo.task }}
       </span>
@@ -32,7 +36,7 @@
         @click="hapus(index)"
       >
         Hapus
-</button>
+      </button>
     </li>
   </ul>
 </template>
@@ -43,6 +47,8 @@ import { ref } from 'vue'
 interface Todo {
   task: string
   done: boolean
+  deleted: boolean
+
 }
 
 const input = ref('')
@@ -52,15 +58,17 @@ function tambah() {
   if (input.value.trim() === '') {
     return
   }
-  todos.value.push({
-    task: input.value,
-    done: false
-  })
+ todos.value.push({
+  task: input.value,
+  done: false,
+  deleted: false
+})
   input.value = ''
 }
 
 function hapus(index: number) {
-  todos.value.splice(index, 1)
+  todos.value[index].deleted = true
+
 }
 </script>
 
@@ -94,6 +102,7 @@ background: lightgreen;
   color: gray;
 }
 
+
 .form {
   display: flex;
   justify-content: center;
@@ -123,5 +132,11 @@ input[type="text"] {
   border-radius: 30px;
   background: red;
   color: white;
+}
+
+.hapus {
+  background: lightcoral;
+  color: gray;
+  text-decoration: line-through;
 }
 </style>
