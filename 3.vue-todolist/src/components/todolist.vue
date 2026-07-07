@@ -17,10 +17,7 @@
     <li
       v-for="(todo, index) in todos"
       :key="index"
-      :class="{
-      selesai: todo.done, 
-      hapus: todo.deleted
-    }"
+      :class="{ selesai: todo.done, hapus: todo.deleted}"
       >
       <input
        type="checkbox"
@@ -45,9 +42,9 @@
 import { ref } from 'vue'
 
 interface Todo {
-  task: string
-  done: boolean
-  deleted: boolean
+  task: string;
+  done: boolean;
+  deleted: boolean;
 
 }
 
