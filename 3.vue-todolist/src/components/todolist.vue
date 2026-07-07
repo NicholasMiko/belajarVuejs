@@ -65,7 +65,6 @@ function tambah() {
 
 function hapus(index: number) {
   todos.value[index].deleted = true
-
 }
 </script>
 
