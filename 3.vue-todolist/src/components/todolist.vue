@@ -5,24 +5,34 @@
       type="text"
       v-model="input"
       placeholder="Ketik disini..."
-  >
-  <button @click="tambah">
-    Tambah
-  </button>
+      >
+    <button
+    class="tambahin" 
+    @click="tambah">
+      Tambah
+    </button>
   </div>
+
   <ul>
     <li
       v-for="(todo, index) in todos"
       :key="index"
       :class="{ selesai: todo.done }"
-    >
+      >
       <input
         type="checkbox"
         v-model="todo.done"
       >
       <span>
-        {{ todo.text }}
+        {{ todo.task }}
       </span>
+      
+      <button
+        class="hapusin"
+        @click="hapus(index)"
+      >
+        Hapus
+</button>
     </li>
   </ul>
 </template>
@@ -31,7 +41,7 @@
 import { ref } from 'vue'
 
 interface Todo {
-  text: string
+  task: string
   done: boolean
 }
 
@@ -43,10 +53,14 @@ function tambah() {
     return
   }
   todos.value.push({
-    text: input.value,
+    task: input.value,
     done: false
   })
   input.value = ''
+}
+
+function hapus(index: number) {
+  todos.value.splice(index, 1)
 }
 </script>
 
@@ -73,8 +87,7 @@ li {
 background: lightgreen;
 
 }
-/* Ko, ini dipisahin bungkus span nya dengan yg atas ya.
-kalau digabung hijau nya tidak full 1 bubble*/
+
 .selesai span{
   
      text-decoration: line-through;
@@ -95,11 +108,20 @@ input[type="text"] {
   border: 2px solid grey;
 }
 
-button {
-  padding: 15px 30px;
+.tambahin {
+  padding: px 30px;
   border: none;
-  border-radius: 10px;
+  border-radius: 100px;
   background: green;
+  color: white;
+}
+
+.hapusin {
+  margin-left: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: red;
   color: white;
 }
 </style>

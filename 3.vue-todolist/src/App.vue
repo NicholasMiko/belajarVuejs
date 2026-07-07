@@ -1,5 +1,6 @@
 <template>
-  <todolist />
+ <todolist />
+ <text />
   </template>
 
   <script setup lang="ts">
