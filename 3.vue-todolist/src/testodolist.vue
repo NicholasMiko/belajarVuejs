@@ -1,61 +1,83 @@
 <template>
-<h1>TO DO LIST</h1>
+  <h1>TO DO LIST</h1>
+
   <div class="form">
     <input
       type="text"
       v-model="input"
       placeholder="Ketik disini..."
-      >
+    >
     <button class="tambahin" @click="tambah">
       Tambah
     </button>
 
-    <button
-    @click="clear">
-    Clear
+    <button @click="clear">
+      Clear
     </button>
   </div>
-  
+
+  <div>
+    <button
+      class="allin"
+      @click="all"
+    >
+      All
+    </button>
+
+    <button
+      class="activin"
+      @click="active"
+    >
+      Active
+    </button>
+
+    <button
+      class="donin"
+      @click="done"
+    >
+      Done
+    </button>
+  </div>
+
   <div>
     <ul>
-        <li
-        v-for="(todo, index) in todos"
+      <li
+        v-for="(todo, index) in filtertodo"
         :key="index"
-        :class="{ selesai: todo.done, hapus: todo.deleted}"
-        >
+        :class="{ selesai: todo.done, hapus: todo.deleted }"
+      >
         <input
-        type="checkbox"
-        v-model="todo.done"
-        :disabled="todo.deleted"
+          type="checkbox"
+          v-model="todo.done"
+          :disabled="todo.deleted"
         >
         <span>
-            {{index+1}}, {{ todo.task }}
+          {{ index + 1 }}, {{ todo.task }}
         </span>
 
         <button
-            class="hapusin"
-            @click="hapus(index)"
+          class="hapusin"
+          @click="hapus(todo)"
         >
-            Hapus
+          Hapus
         </button>
-        </li>
+      </li>
     </ul>
   </div>
 
-  <div v-if="todos.length === 0" style="margin-left: 845px;">{{ popup }} </div>
-
+  <div v-if="filtertodo.length === 0" style="margin-left: 845px;">{{ popup }}</div>
 </template>
 
-    <script setup lang="ts">
-
-import { ref } from 'vue'
+<script setup lang="ts">
+import { ref, computed } from 'vue'
 
 interface Todo {
-  task: string;
-  done: boolean;
-  deleted: boolean;
+  task: string
+  done: boolean
+  deleted: boolean
 }
 
+type FilterStatus = 'all' | 'active' | 'done'
 
 const popup = ref('Belum ada Toko')
 const input = ref('')
@@ -65,20 +87,42 @@ function tambah() {
   if (input.value.trim() === '') {
     return
   }
- todos.value.push({
+  todos.value.push({
     task: input.value,
     done: false,
     deleted: false,
-})
+  })
   input.value = ''
 }
 
- function hapus(index: number) {
-  const todo = todos.value[index]
-   if (todo) {
-     todo.deleted = true
-   }
+function hapus(todo: Todo) {
+  todo.deleted = true
 }
+
+const filter = ref<FilterStatus>('all')
+
+function all() {
+  filter.value = 'all'
+}
+function active() {
+  filter.value = 'active'
+}
+function done() {
+  filter.value = 'done'
+}
+
+const filtertodo = computed(() => {
+  const visible = todos.value
+
+  if (filter.value === 'active') {
+    return visible.filter(todo => !todo.done && !todo.deleted)
+  }
+  if (filter.value === 'done') {
+    return visible.filter(todo => todo.done && !todo.deleted)
+  }
+
+  return visible
+})
 
 const clear = () => {
   todos.value = []
@@ -104,17 +148,13 @@ li {
 }
 
 .selesai {
-
-background: lightgreen;
-
+  background: lightgreen;
 }
 
-.selesai span{
-  
-     text-decoration: line-through;
+.selesai span {
+  text-decoration: line-through;
   color: gray;
 }
-
 
 .form {
   display: flex;
@@ -152,4 +192,27 @@ input[type="text"] {
   color: gray;
   text-decoration: line-through;
 }
+
+.allin {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: blue;
+}
+
+.donin {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: yellow;
+}
+
+.activin {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: cyan;
+}
+
 </style>
