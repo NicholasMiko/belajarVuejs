@@ -14,14 +14,16 @@
   </div>
 
   <ul>
-    <TodoItem
-      v-for="(todo, index) in props.todos"
-      :key="index"
-      :todo="todo"
-      :index="index"
-      @toggle="emit('toggle', todo)"
-      @delete="emit('delete', todo)"
-    />
+    <div>
+      <TodoItem
+        v-for="(todo, index) in props.todos"
+        :key="index"
+        :todo="todo"
+        :index="index"
+        @toggle="emit('toggle', todo)"
+        @delete="emit('delete', todo)"
+      />
+    </div>
   </ul>
 </template>
 
@@ -39,11 +41,11 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e: 'all'): void
-  (e: 'active'): void
-  (e: 'done'): void
-  (e: 'toggle', todo: Todo): void
-  (e: 'delete', todo: Todo): void
+  (emit: 'all'): void
+  (emit: 'active'): void
+  (emit: 'done'): void
+  (emit: 'toggle', todo: Todo): void
+  (emit: 'delete', todo: Todo): void
 }>()
 </script>
 
@@ -57,13 +59,13 @@ const emit = defineEmits<{
 
 .allin {
   padding: 8px 16px;
-  background: blue;
+  background: orangered ;
   color: white;
 }
 
 .activin {
   padding: 8px 16px;
-  background: cyan;
+  background: orange;
 }
 
 .donin {

@@ -1,11 +1,10 @@
 ]<template>
   <div class="form">
-    <input
-      type="text"
-      :value="props.input"
-      @input="updateInput"
-      placeholder="Ketik disini..."
-    />
+   <input
+  type="text"
+  v-model="_model"
+  placeholder="Ketik disini..."
+/>
 
     <button class="tambahin" @click="emit('add')">
       Tambah
@@ -18,19 +17,26 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+
+const _model = ref<string>()
+
 const props = defineProps<{
-  input: string
+  modelValue: string
 }>()
 
 const emit = defineEmits<{
-  (emit: 'update-input', value: string): void
+  (emit: 'update:modelValue', value: string | undefined): void
   (emit: 'add'): void
   (emit: 'clear'): void
 }>()
 
-function updateInput(event: Event) {
-  const target = event.target as HTMLInputElement
-  emit('update-input', target.value)
+watch(() => _model.value, () => {
+  updateModel();
+})
+
+const updateModel = () => {
+  emit('update:modelValue', _model.value)
 }
 </script>
 

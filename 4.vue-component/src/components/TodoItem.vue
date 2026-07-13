@@ -15,6 +15,13 @@
       Hapus
     </button>
   </li>
+
+<slot
+:todo="props.todo"
+:index="props.index"
+
+/>
+
 </template>
 
 <script setup lang="ts">
@@ -30,8 +37,8 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e: 'toggle'): void
-  (e: 'delete'): void
+  (emit: 'toggle'): void
+  (emit: 'delete'): void
 }>()
 </script>
 
