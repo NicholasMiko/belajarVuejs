@@ -1,5 +1,5 @@
 <template>
-  <!-- <h1>TO DO LIST</h1>
+  <h1>TO DO LIST</h1>
   <div class="form">
     <input
       type="text"
@@ -71,7 +71,7 @@
   <div v-for="(addr, index) in person.address"> 
   <div style="background-color: red;">{{index+1}}, {{ addr }},{{ person.name }},{{ person.age }}</div>
   </div>
-</div> -->
+</div>
 
 <div v-for="(person, index) in persons" :key="index">
   <div style="background-color: aqua; margin-bottom: 50px;">
@@ -104,7 +104,7 @@
   </div>
 </div>
 <hr />
-  <!-- <pre>{{ persons }}</pre>
+  <pre>{{ persons }}</pre>
   <hr/>{{ persons[1]?.age }}
 
 <div v-for="(car, u) in cars" :key="u">
@@ -117,11 +117,11 @@
 
 <div>{{ cars[0]?.color }}</div> -->
 
-<!-- <div v-for="(anak,index) in anaks" :key="index">
+<div v-for="(anak,index) in anaks" :key="index">
   <div v-for="(hobi, index) in anak.hobi">{{ hobi }} </div>
     <div>{{ anak.name }}</div>
     <div>{{ anak.sekolah }}</div>
-</div> -->
+</div>
 
 </template>
 //setiap orang punya banyak anak, butuh ditampilkan anak-anaknya. Setiap anak-anaknya butuh info: nama, hobi (bisa lebih dari 1), nama sekolah 
